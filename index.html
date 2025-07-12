@@ -8,7 +8,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="dark">
+<body>
   <header>
     <div class="container">
       <h1>Marc Antazo</h1>
@@ -63,33 +63,6 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
-  <script>
-    const ctx = document.getElementById('skillChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['HTML', 'CSS', 'JavaScript', 'Python', 'C#', 'SQL'],
-        datasets: [{
-          label: 'Skill Level (%)',
-          data: [90, 85, 75, 80, 70, 65],
-          borderColor: 'rgba(0,191,255,0.8)',
-          backgroundColor: 'rgba(0,191,255,0.2)',
-          tension: 0.4,
-          fill: true,
-          pointRadius: 5
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          y: {
-            beginAtZero: true,
-            max: 100
-          }
-        }
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
