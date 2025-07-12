@@ -262,3 +262,39 @@ nav a:hover {
     padding-right: 0;
   }
 }
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skill-item {
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+  border: 1px solid #00bcd4;
+  color: #00bcd4;
+  border-radius: 20px;
+  font-weight: bold;
+  width: 150px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.skill-item:hover {
+  background-color: #00bcd4;
+  color: #121212;
+}
+
+.skills-chart {
+  flex: 1;
+  max-width: 500px;
+}
+
