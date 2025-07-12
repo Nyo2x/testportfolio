@@ -1,17 +1,28 @@
-// Smooth scroll for navigation links
-document.querySelectorAll("nav a").forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+// script.js
+
+// Animate contact form submission
+const form = document.querySelector(".contact-container");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  alert("Thanks for reaching out! I'll get back to you soon.");
+  form.reset();
+});
+
+// Smooth scroll for nav links
+document.querySelectorAll("nav a").forEach((link) => {
+  link.addEventListener("click", function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
+    const targetId = this.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+    targetSection.scrollIntoView({ behavior: "smooth" });
   });
 });
 
-// Optional: Form handling (can be replaced by your backend or service like Formspree)
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Thank you! Your message has been submitted.");
-  this.reset();
-});
+// AOS (already initialized inline in HTML, but if needed dynamically)
+if (typeof AOS !== 'undefined') {
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true
+  });
+}
