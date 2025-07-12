@@ -6,56 +6,90 @@
   <title>Marc Antazo | Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
+<body class="dark">
   <header>
-    <h1>Marc Antazo</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>Marc Antazo</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <img src="your-photo.jpg" alt="Your photo" class="profile-img">
-    <p>I’m a 4th-year IT student currently completing my OJT at Valley Golf & Country Club. I build C# desktop apps, automate with Python, and work on cloud & web tech like AWS and GitHub.</p>
-  </section>
+  <main>
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <img src="your-photo.jpg" alt="Your photo" class="profile-img">
+      <p><enter text here></p>
+    </section>
 
-  <section id="skills" data-aos="fade-up">
-    <h2>Skills</h2>
-    <canvas id="skillChart"></canvas>
-  </section>
+    <section id="skills" data-aos="fade-up">
+      <h2>Skills</h2>
+      <canvas id="skillChart"></canvas>
+    </section>
 
-  <section id="projects" data-aos="fade-up">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>FrmCalculator</strong> – Windows Forms calculator app</li>
-      <li><strong>FrmBasicThread</strong> – Thread process demo with suspend/resume</li>
-      <li><strong>Queue Display System</strong> – Real-time queueing app with cashier display</li>
-    </ul>
-  </section>
+    <section id="projects" data-aos="fade-up">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>FrmCalculator</strong> – <enter text here></li>
+        <li><strong>FrmBasicThread</strong> – <enter text here></li>
+        <li><strong>Queue Display System</strong> – <enter text here></li>
+      </ul>
+    </section>
 
-  <section id="certificates" data-aos="fade-up">
-    <h2>Certificates</h2>
-    <img src="cert1.jpg" alt="Certificate 1" class="cert-img">
-    <img src="cert2.jpg" alt="Certificate 2" class="cert-img">
-  </section>
+    <section id="certificates" data-aos="fade-up">
+      <h2>Certificates</h2>
+      <img src="cert1.jpg" alt="Certificate 1" class="cert-img">
+      <img src="cert2.jpg" alt="Certificate 2" class="cert-img">
+    </section>
 
-  <section id="contact" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>GitHub | TikTok | LinkedIn</p>
-  </section>
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Email: <enter text here></p>
+      <p>Links: <enter text here></p>
+    </section>
+  </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <footer>
+    <p>&copy; 2025 Marc Antazo</p>
+  </footer>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="script.js"></script>
   <script>AOS.init();</script>
+  <script>
+    const ctx = document.getElementById('skillChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['HTML', 'CSS', 'JavaScript', 'Python', 'C#', 'SQL'],
+        datasets: [{
+          label: 'Skill Level (%)',
+          data: [90, 85, 75, 80, 70, 65],
+          borderColor: 'rgba(0,191,255,0.8)',
+          backgroundColor: 'rgba(0,191,255,0.2)',
+          tension: 0.4,
+          fill: true,
+          pointRadius: 5
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
