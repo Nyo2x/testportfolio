@@ -1,121 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marc Andrew Antazo | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav>
-      <a href="#intro">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#experience">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marc Andrew Antazo | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
 
-    <!-- Intro Section -->
-    <section id="intro" class="intro-section">
-      <div class="intro-content" data-aos="fade-up">
-        <h1>Creative Developer<br />crafting immersive digital experiences</h1>
-        <p>Scroll down to learn more about me</p>
-      </div>
-    </section>
+  <!-- Navigation -->
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-      <div class="about-container" data-aos="fade-up">
-        <div class="about-text">
-          <h2>About Me</h2>
-          <p>
-            Motivated and detail-oriented IT graduate with a solid foundation in software and game development,
-            systems administration, and object-oriented programming (OOP).
-          </p>
-          <h3>Education</h3>
-          <p>
-            <strong>Bachelor of Science in Information Technology</strong><br />
-            STI College Ortigas-Cainta<br />
-            Expected Graduation: July 2025
-          </p>
-        </div>
-        <div class="about-image">
-          <img src="printimg.png" alt="Marc Andrew Antazo" />
-        </div>
-      </div>
-    </section>
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Marc Andrew Antazo</h1>
+      <p>Creative Developer crafting immersive digital experiences</p>
+      <a href="#about" class="hero-button">Learn More</a>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>
+        Motivated and detail-oriented IT graduate with a strong foundation in software and game
+        development. Passionate about creating immersive digital experiences and continuously growing as a developer.
+      </p>
+      <p><strong>Bachelor of Science in Information Technology</strong><br>STI College Ortigas-Cainta<br>Expected Graduation: July 2025</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container" data-aos="fade-up">
       <h2>Skills</h2>
       <div class="skills-icons">
-        <img src="icons/html.png" alt="HTML" title="HTML" />
-        <img src="icons/css.png" alt="CSS" title="CSS" />
-        <img src="icons/python.png" alt="Python" title="Python" />
-        <img src="icons/unity.png" alt="Unity" title="Unity" />
-        <img src="icons/csharp.png" alt="C#" title="C#" />
+        <img src="icons/html.png" alt="HTML" />
+        <img src="icons/css.png" alt="CSS" />
+        <img src="icons/python.png" alt="Python" />
+        <img src="icons/unity.png" alt="Unity" />
+        <img src="icons/csharp.png" alt="C#" />
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container" data-aos="fade-up">
       <h2>Projects</h2>
-      <div class="projects-container" data-aos="fade-up">
-        <div class="project-item">
-          <h3>Lost Technician</h3>
-          <p>A capstone project involving exploration, puzzle-solving, and survival in a broken-down futuristic facility. Built using Unity Engine.</p>
-          <!-- <img src="project-image.jpg" alt="Lost Technician Screenshot" /> -->
-        </div>
+      <div class="project-item">
+        <h3>Lost Technician</h3>
+        <p>A capstone project game that puts players in the role of a stranded technician in a futuristic world. Explore, survive, and restore systems.</p>
+        <!-- <img src="project-image.jpg" alt="Lost Technician" /> -->
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Certificates Section -->
-    <section id="certificates" class="certificates-section">
+  <!-- Certificates Section -->
+  <section id="certificates" class="certificates-section">
+    <div class="container" data-aos="fade-up">
       <h2>Certificates</h2>
-      <div class="certificates-gallery">
-        <div>Google Cybersecurity Professional - Coursera</div>
-        <div>CCNA: Introduction to Networks - Cisco</div>
-        <div>Introduction to Cybersecurity - Cisco</div>
-        <!-- Add certificate images later -->
-      </div>
-    </section>
+      <ul>
+        <li>Google Cybersecurity Professional - Coursera</li>
+        <li>CCNA: Introduction to Networks - Cisco</li>
+        <li>Introduction to Cybersecurity - Cisco</li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- Work Experience Section -->
-    <section id="experience" class="experience-section">
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="container" data-aos="fade-up">
       <h2>Work Experience</h2>
       <div class="experience-item">
         <h3>Trust Trade Gun and Ammunition</h3>
-        <p>Sales Representative and LTPOF Encoder. Assisted clients with purchasing firearms, managing LTPOF applications, and FEO accounts.</p>
+        <p>Sales Representative and LTPOF Encoder. Assisted clients with firearm purchases and managed LTPOF applications and FEO accounts.</p>
       </div>
       <div class="experience-item">
         <h3>Virtual Assistant - Upwork</h3>
-        <p>Created professional resumes, managed daily tasks, and supported clients in personal and work matters.</p>
+        <p>Helped clients create professional resumes and organize work tasks and schedules remotely.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <h2>Contact Me</h2>
-      <div class="contact-container">
-        <form>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea rows="4" placeholder="Your Message"></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container" data-aos="fade-up">
+      <h2>Contact</h2>
+      <form class="contact-container">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-    <!-- AOS & JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
 </html>
