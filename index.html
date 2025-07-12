@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -44,13 +46,58 @@
     </div>
   </section>
 
+  <!-- Skills Section with Chart -->
+  <section id="skills" class="skills-section">
+    <div class="skills-container" data-aos="fade-up">
+      <h2>Skills</h2>
+      <canvas id="skillsChart" width="600" height="300"></canvas>
+    </div>
+  </section>
+
   <!-- AOS Animation Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    AOS.init();
-  });
-  console.log("Welcome to Marc's portfolio!");
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init();
+
+      const ctx = document.getElementById('skillsChart').getContext('2d');
+      const skillsChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['HTML', 'CSS', 'JavaScript', 'Python', 'C#', 'SQL'],
+          datasets: [{
+            label: 'Proficiency Level',
+            data: [85, 80, 75, 70, 65, 60],
+            borderColor: '#00bcd4',
+            backgroundColor: 'rgba(0, 188, 212, 0.2)',
+            fill: true,
+            tension: 0.4,
+            pointBackgroundColor: '#00bcd4'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              labels: {
+                color: 'white'
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: { color: 'white' },
+              grid: { color: '#333' }
+            },
+            y: {
+              ticks: { color: 'white' },
+              grid: { color: '#333' }
+            }
+          }
+        }
+      });
+    });
+    console.log("Welcome to Marc's portfolio!");
   </script>
 </body>
 </html>
