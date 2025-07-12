@@ -1,98 +1,24 @@
-:root {
-  --bg-color: #121212;
-  --text-color: #ffffff;
-  --accent: #00bfff;
-  --card-bg: #1e1e1e;
-  --border-radius: 12px;
-}
-
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-header {
-  background: #000;
-  padding: 1.5rem 0;
+/* SKILLS Section */
+.skills-section {
+  background-color: #1a1a1a;
+  padding: 60px 20px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
-header h1 {
-  margin: 0;
-  color: var(--accent);
+.skills-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
+.skills-section h2 {
+  font-size: 2rem;
+  color: #00bcd4;
+  margin-bottom: 40px;
 }
 
-nav a {
-  color: #aaa;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: var(--accent);
-}
-
-main {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-section {
-  margin-bottom: 4rem;
-  background-color: var(--card-bg);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-h2 {
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 1rem;
-  object-fit: cover;
-  border: 3px solid var(--accent);
-}
-
-ul {
-  padding-left: 1.2rem;
-}
-
-.cert-img {
-  width: 200px;
-  margin: 10px;
-  border-radius: var(--border-radius);
-  border: 2px solid var(--accent);
-  box-shadow: 0 0 10px rgba(0,191,255,0.3);
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: #000;
-  color: #777;
-}
-
-canvas {
-  max-width: 100%;
+canvas#skillsChart {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
 }
