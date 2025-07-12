@@ -1,50 +1,195 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marc Antazo | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --accent: #00bfff;
+      --card-bg: #1e1e1e;
+      --border-radius: 12px;
+    }
 
-header {
-  background-color: #222;
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
-}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-}
+    header {
+      background: #000;
+      padding: 1.5rem 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
 
-nav li {
-  margin: 0 15px;
-}
+    header h1 {
+      margin: 0;
+      color: var(--accent);
+    }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
 
-section {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-}
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
 
-.profile-img {
-  width: 140px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 1rem;
-}
+    nav a:hover {
+      color: var(--accent);
+    }
 
-.cert-img {
-  width: 200px;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 4rem;
+      background-color: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1rem;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .cert-img {
+      width: 200px;
+      margin: 10px;
+      border-radius: var(--border-radius);
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 10px rgba(0,191,255,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #000;
+      color: #777;
+    }
+
+    canvas {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Marc Antazo</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <img src="your-photo.jpg" alt="Your photo" class="profile-img">
+      <p><enter text here></p>
+    </section>
+
+    <section id="skills" data-aos="fade-up">
+      <h2>Skills</h2>
+      <canvas id="skillChart"></canvas>
+    </section>
+
+    <section id="projects" data-aos="fade-up">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>FrmCalculator</strong> – <enter text here></li>
+        <li><strong>FrmBasicThread</strong> – <enter text here></li>
+        <li><strong>Queue Display System</strong> – <enter text here></li>
+      </ul>
+    </section>
+
+    <section id="certificates" data-aos="fade-up">
+      <h2>Certificates</h2>
+      <img src="cert1.jpg" alt="Certificate 1" class="cert-img">
+      <img src="cert2.jpg" alt="Certificate 2" class="cert-img">
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Email: <enter text here></p>
+      <p>Links: <enter text here></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Marc Antazo</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    const ctx = document.getElementById('skillChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['HTML', 'CSS', 'JavaScript', 'Python', 'C#', 'SQL'],
+        datasets: [{
+          label: 'Skill Level (%)',
+          data: [90, 85, 75, 80, 70, 65],
+          borderColor: 'rgba(0,191,255,0.8)',
+          backgroundColor: 'rgba(0,191,255,0.2)',
+          tension: 0.4,
+          fill: true,
+          pointRadius: 5
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
