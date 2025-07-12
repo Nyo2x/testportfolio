@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marc Antazo | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Marc Antazo</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <img src="your-photo.jpg" alt="Your photo" class="profile-img">
+    <p>I’m a 4th-year IT student currently completing my OJT at Valley Golf & Country Club. I build C# desktop apps, automate with Python, and work on cloud & web tech like AWS and GitHub.</p>
+  </section>
+
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <canvas id="skillChart"></canvas>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>FrmCalculator</strong> – Windows Forms calculator app</li>
+      <li><strong>FrmBasicThread</strong> – Thread process demo with suspend/resume</li>
+      <li><strong>Queue Display System</strong> – Real-time queueing app with cashier display</li>
+    </ul>
+  </section>
+
+  <section id="certificates" data-aos="fade-up">
+    <h2>Certificates</h2>
+    <img src="cert1.jpg" alt="Certificate 1" class="cert-img">
+    <img src="cert2.jpg" alt="Certificate 2" class="cert-img">
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+    <p>GitHub | TikTok | LinkedIn</p>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
