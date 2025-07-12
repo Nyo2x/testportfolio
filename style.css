@@ -1,51 +1,27 @@
-/* Global Styles */
+/* Reset & Basics */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0e0e0e;
-  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
   scroll-behavior: smooth;
 }
 
-section {
-  padding: 100px 20px;
-}
-
-h2 {
-  font-size: 2.5rem;
-  color: #00bcd4;
-  margin-bottom: 20px;
-  position: relative;
-  display: inline-block;
-}
-
-h2::after {
-  content: '';
-  display: block;
-  height: 4px;
-  width: 50%;
-  background: #00bcd4;
-  margin-top: 5px;
-}
-
-/* Navigation */
 nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #111;
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 20px;
+  gap: 2rem;
+  background-color: #1e1e1e;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 nav a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   transition: color 0.3s;
 }
 
@@ -53,230 +29,146 @@ nav a:hover {
   color: #00bcd4;
 }
 
-/* Hero Section */
-.hero {
+.hero-section {
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background: #121212;
   text-align: center;
-  background: #0e0e0e;
-  padding-top: 100px;
+  padding: 2rem;
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  color: #fff;
+  margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  color: #aaa;
-  margin-top: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
 }
 
-/* About Section */
-.about {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+.hero-button {
+  padding: 12px 24px;
+  background: #00bcd4;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.hero-button:hover {
+  background: #0097a7;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+.container {
   max-width: 1000px;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
 }
 
-.about-text {
-  flex: 1 1 400px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #ccc;
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-left: 4px solid #00bcd4;
+  padding-left: 10px;
 }
 
-.about-img img {
-  width: 200px;
-  border-radius: 50%;
-  border: 3px solid #00bcd4;
-}
-
-/* Skills Section */
-.skills {
-  text-align: center;
-}
-
+/* Skills */
 .skills-icons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.skills-icons .skill {
-  background: #1a1a1a;
-  padding: 20px;
-  border-radius: 12px;
-  width: 100px;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.skills-icons .skill:hover {
-  transform: scale(1.1);
-}
-
-.skills-icons img {
-  width: 50px;
-  margin-bottom: 10px;
-}
-
-/* Projects Section */
-.projects {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.project-card {
-  background: #1c1c1c;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-
-.project-card h3 {
-  color: #00bcd4;
-  margin-bottom: 10px;
-}
-
-.project-card p {
-  color: #ccc;
-  margin-bottom: 10px;
-}
-
-.project-card a {
-  color: #00acc1;
-  text-decoration: none;
-}
-
-.project-card a:hover {
-  text-decoration: underline;
-}
-
-/* Certificates Section */
-.certificates {
-  text-align: center;
-}
-
-.certificates-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  gap: 2rem;
   margin-top: 30px;
 }
 
-.certificates-gallery img {
-  width: 220px;
-  border-radius: 10px;
-  border: 2px solid #00bcd4;
+.skills-icons img {
+  width: 60px;
+  height: 60px;
   transition: transform 0.3s;
 }
 
-.certificates-gallery img:hover {
-  transform: scale(1.05);
+.skills-icons img:hover {
+  transform: scale(1.1);
 }
 
-/* Work Experience */
-.work {
-  max-width: 800px;
-  margin: auto;
-}
-
-.job {
-  background: #1c1c1c;
+/* Project */
+.project-item {
+  background: #1e1e1e;
   padding: 20px;
   border-radius: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
 }
 
-.job h4 {
-  margin: 0 0 10px;
-  color: #00bcd4;
-}
-
-.job span {
-  display: block;
-  color: #aaa;
-  font-size: 0.9rem;
+.project-item h3 {
   margin-bottom: 10px;
 }
 
-.job p {
-  color: #ccc;
+/* Certificates */
+.certificates-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.certificates-section li {
+  margin-bottom: 10px;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.certificates-section li::before {
+  content: '\2022';
+  color: #00bcd4;
+  position: absolute;
+  left: 0;
+}
+
+/* Experience */
+.experience-item {
+  background: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #00bcd4;
+}
+
+.experience-item h3 {
+  margin-top: 0;
 }
 
 /* Contact */
-.contact form {
-  max-width: 500px;
-  margin: auto;
+.contact-container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
 }
 
-.contact input,
-.contact textarea {
-  padding: 12px;
+.contact-container input,
+.contact-container textarea {
+  padding: 10px;
   border-radius: 5px;
-  border: 1px solid #333;
-  background-color: #111;
-  color: white;
+  border: none;
   font-size: 1rem;
 }
 
-.contact button {
-  padding: 12px;
-  background-color: #00bcd4;
-  border: none;
+.contact-container button {
+  background: #00bcd4;
   color: white;
-  font-weight: bold;
-  cursor: pointer;
+  border: none;
+  padding: 12px;
   border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
   transition: background 0.3s;
 }
 
-.contact button:hover {
+.contact-container button:hover {
   background: #0097a7;
-}
-
-/* Footer Socials */
-.footer {
-  background: #111;
-  text-align: center;
-  padding: 30px 20px;
-  color: #999;
-  font-size: 0.9rem;
-}
-
-.footer a {
-  margin: 0 10px;
-  color: #00bcd4;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
-    text-align: center;
-  }
-  nav {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
 }
